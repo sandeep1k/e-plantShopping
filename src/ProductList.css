@@ -70,7 +70,6 @@ body {
     border-radius: 5px;
     text-align: center;
     position: relative;
-    
     gap: 20px;
 }
 
@@ -109,6 +108,12 @@ body {
 
 .product-button:hover {
     background-color: #c0392b;
+}
+
+.product-button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+    opacity: 0.8;
 }
 
 /* Pseudo-elements - Sale badge */
@@ -163,14 +168,22 @@ body {
 .cart{
     color: white;
     display: flex;
+    position: relative;
+    width: 100px;
+    height: 100px;
 }
 .cart_quantity_count{
     margin-top: 16px;
-    /* background-color: red; */
-    margin-left: 27px;
     position: absolute;
-    font-size: 29px;
-
+    z-index: 99;
+    top:0;
+    left: 0;
+}
+.position-count {
+    color:#fff;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 38px 20px 30px 30px;
 }
 .plantname_heading{
    display: flex;
